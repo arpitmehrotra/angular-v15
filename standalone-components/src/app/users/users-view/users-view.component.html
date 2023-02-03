@@ -1,0 +1,12 @@
+<article class="details-panel" *ngIf="user$ | async as user">
+  <article>
+    <h1 class="main-text">Hi, I'm {{ user.name }}</h1>
+    <h2>
+      My email address is <span class="emphasize">{{ user.email }}</span>
+    </h2>
+    <p>My website is {{ user.website }}</p>
+    <p>
+      I live in <span class="emphasize">{{ user.address.city }}</span>
+    </p>
+  </article>
+</article>
