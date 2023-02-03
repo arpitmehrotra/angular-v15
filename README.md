@@ -1,1 +1,4 @@
-"# Repository on latest features in Angular" 
+# Repository on latest features in Angular
+
+* Standalone Components
+
