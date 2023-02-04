@@ -5,7 +5,13 @@ import { UnderlineDirective } from './underline.directive';
 @Directive({
   selector: '[appMouseenter]',
   standalone: true,
-  hostDirectives: [BoldDirective, UnderlineDirective],
+  hostDirectives: [
+    BoldDirective,
+    {
+      directive: UnderlineDirective,
+      inputs: ['color'],
+    },
+  ],
 })
 export class MouseenterDirective {
   constructor() {}
