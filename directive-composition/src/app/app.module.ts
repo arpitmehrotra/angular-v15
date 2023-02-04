@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TesterComponent } from './components/tester/tester.component';
-import { BoldDirective } from './directives/bold.directive';
-import { UnderlineDirective } from './directives/underline.directive';
+import { MouseenterDirective } from './directives/mouseenter.directive';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,8 +12,7 @@ import { UnderlineDirective } from './directives/underline.directive';
     BrowserModule,
     AppRoutingModule,
     TesterComponent,
-    BoldDirective,
-    UnderlineDirective,
+    MouseenterDirective,
   ],
   providers: [],
   bootstrap: [AppComponent],
