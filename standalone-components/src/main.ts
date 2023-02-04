@@ -1,7 +1,20 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter, Routes } from '@angular/router';
+import { AppComponent } from './app/app.component';
+import { UsersListComponent } from './app/users/users-list/users-list.component';
 
-import { AppModule } from './app/app.module';
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'list' },
+  { path: 'list', component: UsersListComponent },
+  {
+    path: 'details/:index',
+    loadComponent: () =>
+      import('./app/users/users-view/users-view.component').then(
+        (c) => c.UsersViewComponent
+      ),
+  },
+];
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)],
+});
