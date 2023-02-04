@@ -6,10 +6,13 @@ import { UnderlineDirective } from './underline.directive';
   selector: '[appMouseenter]',
   standalone: true,
   hostDirectives: [
-    BoldDirective,
+    {
+      directive: BoldDirective,
+      outputs: ['hover:boldHover'],
+    },
     {
       directive: UnderlineDirective,
-      inputs: ['color'],
+      inputs: ['color:underlineColor'],
     },
   ],
 })
