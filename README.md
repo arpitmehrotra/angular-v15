@@ -1,4 +1,4 @@
 # Repository on latest features in Angular
 
-* Standalone Components
-
+- Standalone Components
+- Directive Composition API
