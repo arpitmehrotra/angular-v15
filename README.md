@@ -2,3 +2,4 @@
 
 - Standalone Components
 - Directive Composition API
+- Image Directive
